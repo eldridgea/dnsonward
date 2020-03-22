@@ -1,0 +1,8 @@
+. {
+    forward . ---IP1--- ---IP2--- {
+      tls_servername ---SERVERNAME---
+      health_check 5s
+    }
+    cache ---CACHE---
+}
+
