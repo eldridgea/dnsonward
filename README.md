@@ -6,7 +6,7 @@ A CoreDNS based service that forwards traditional DNS requests to a DNS-over-TLS
 Run `docker run -e SERVICE="cloudflare" -p 53:53 -p 53:53/udp eldridgea/dnsonward`
 
 This will start the service using Cloudflare as its upstream DNS server. You can replace "cloudflare" in the line above with either "google" or "quad9" to use their servers instead.
-This will open up port 53 on your machine and allow it to accept incomign DNS requests.
+This will open up port 53 on your machine and allow it to accept incoming DNS requests.
 enviornments
 WARNING: It is NOT recommended to expose this serivce to the entire Intenet, just in private netowrk environments. 
 
