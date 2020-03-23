@@ -1,12 +1,5 @@
 ### Takes env variables and generates Corefile
 
-case $(uname -m) in  # Checks architecture and renames the appropriate binary
-  *arm*) mv /coredns-arm /coredns
-  ;;
-  *x86_64*) mv /coredns-x86_64 /coredns
-  ;;
-esac
-
 if [ -z $CACHE ]  # This section sets the default cache to 30s if none is provided
 then
   CACHE=30s

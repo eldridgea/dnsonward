@@ -1,9 +1,8 @@
 FROM alpine
 RUN apk add sed
-ADD https://github.com/coredns/coredns/releases/download/v1.6.7/coredns_1.6.7_linux_amd64.tgz /coredns-x86_64.tgz
-ADD https://github.com/coredns/coredns/releases/download/v1.6.7/coredns_1.6.7_linux_arm.tgz /coredns-arm.tgz
-RUN tar xvzf /coredns-x86_64.tgz && mv /coredns /coredns-x86_64 && tar xvzf /coredns-arm.tgz && mv /coredns /coredns-arm
-RUN rm /coredns-x86_64.tgz && rm /coredns-arm.tgz
+ADD https://github.com/coredns/coredns/releases/download/v1.6.7/coredns_1.6.7_linux_amd64.tgz /coredns.tgz
+RUN tar xvzf /coredns.tgz
+RUN rm /coredns.tgz
 RUN mkdir /coredns-config
 COPY *.template /coredns-config/
 COPY setup.sh /coredns-config/setup.sh
