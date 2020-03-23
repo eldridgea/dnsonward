@@ -11,7 +11,7 @@ enviornments
 
 >WARNING: It is NOT recommended to expose this serivce as-is to the entire Intenet. This is intended for private/controlled network environments. 
 
-## Suported devices and architectures
+## Suported Devices and Architectures
 
 This supports ARM and x86_64. This works on most servers as well as Raspbrry Pis.
 I have tested it successfully on my Pi 4 running Raspbian 10. If you're having an issue on other Pi hardware/OS versions please open an issue.
