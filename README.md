@@ -7,14 +7,19 @@ Run `docker run -e SERVICE="cloudflare" -p 53:53 -p 53:53/udp eldridgea/dnsonwar
 
 This will start the service using Cloudflare as its upstream DNS server. You can replace "cloudflare" in the line above with either "google" or "quad9" to use their servers instead.
 This will open up port 53 on your machine and allow it to accept incoming DNS requests.
-enviornments
-WARNING: It is NOT recommended to expose this serivce to the entire Intenet, just in private netowrk environments. 
+environments
+WARNING: It is NOT recommended to expose this service to the entire Internet, just in private network environments. 
+
+## Supported Devices and Architectures
+
+This supports ARMv7 and amd64 architectures so this should work on on most servers as well as Raspberry Pis.
+I have tested it successfully on my Pi 4 running Raspbian 10. If you're having an issue on other Pi hardware/OS versions please open an issue.
 
 ## Variables
 
-This is CoreDNS-based service intended to be run in enviornments where traditional DNS requests need to be encrypted before querying an upstream server.
+This is CoreDNS-based service intended to be run in environments where traditional DNS requests need to be encrypted before querying an upstream server.
 
-This is intended to be run as a docker container and configured with enviornment variables.
+This is intended to be run as a docker container and configured with environment variables.
 
 Onward DNS supports Cloudflare, Google, and Quad9 out of the box with the `SERVICE` variable, but can also be configured for any DnS-over-TLS (DoT) server.
 
