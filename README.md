@@ -32,3 +32,9 @@ If you are starting this container you should either supply it with the `SERVICE
 | IP2           | A secondary upstream DNS IP Address       |   Any IPv4 Address |
 | SERVERNAME    | The TLS servername                        | The domain name of the DoT server |
 | CACHE         | The amount of time DNS responses are cahced locally | Time in seconds e.g. `100s`. Default is `30s` |
+
+## Multi-Arch Builds in Docker
+
+This is pushed to the `eldridgea/dnsonward` Dockerhub repository using Docker's experimental multi-arch build tool `buildx`. Building this repo using the standard `docker build` process should continue to work fine, but to build a multi-arch image yourself in this repo use, make sure you have [buildx](https://docs.docker.com/buildx/working-with-buildx/) enabled and run:
+
+`docker buildx build --platform linux/amd64,linux/arm/v7 -t eldridgea/dnsonward --push .` and replace `eldridgea/dnsonward` with the repo you'd like to push your build to. You can also add more [supported architectures](https://github.com/docker-library/official-images#architectures-other-than-amd64) in addition to the amd64 and armv7 ones
