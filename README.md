@@ -31,7 +31,7 @@ If you are starting this container you should either supply it with the `SERVICE
 | IP1           | A primary upstream DNS IP Address         |   Any IPv4 Address |
 | IP2           | A secondary upstream DNS IP Address       |   Any IPv4 Address |
 | SERVERNAME    | The TLS servername                        | The domain name of the DoT server |
-| CACHE         | The amount of time DNS responses are cahced locally | Time in seconds e.g. `100s`. Default is `30s` |
+| CACHE         | The amount of time DNS responses are cached locally | Time in seconds e.g. `100s`. Default is `30s` |
 
 ## Multi-Arch Builds in Docker
 
