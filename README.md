@@ -1,5 +1,7 @@
 # DNS-Onward
-A CoreDNS based service that forwards traditional DNS requests to a DNS-over-TLS upstream server
+A CoreDNS based service that forwards traditional DNS requests to a DNS-over-TLS upstream server.
+
+The goal for DNSOnward is a low-complexity, easy-to-use project that can be used with one Docker command. If what you need is taking DNS queries and making sure they're encrypted before leaving your network, DNSOnward is likely a good fit. 
 
 ## Quickstart
 
