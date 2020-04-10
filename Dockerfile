@@ -1,10 +1,10 @@
-FROM golang:1.12
-RUN mkdir /v && cd /v && git clone https://github.com/coredns/coredns.git
-RUN cd /v/coredns && make
+FROM golang:1.14
+RUN git clone https://github.com/coredns/coredns /coredns
+RUN cd /coredns && make
 
 FROM alpine
 
-COPY --from=0 /v/coredns/coredns /coredns
+COPY --from=0 /coredns/coredns /coredns
 
 RUN apk add sed
 RUN mkdir /coredns-config
